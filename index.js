@@ -4,6 +4,10 @@ const Nexmo = require('nexmo');
 
 const app = express();
 
+const nexmo = new Nexmo({
+    apiKey:'0ea46540',
+    apiSecret:'nvhdi95RCw3FBARa',
+},{debug:true});
 
 
 app.set('View engine', 'html');
