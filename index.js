@@ -20,9 +20,16 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.render('index.html')
+
 });
 
 app.post('/', (req, res) => {
+const number = req.body.number;
+const message = req.body.text;
+console.log(message)
+nexmo.message.sendSms(
+    "athanas", number, message
+);
     
 });
 
